@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>
+            My website
+        </title>
+    </head>
+
+    <body background="images/bg4.jpg">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fira+Code&display=swap');
+            .center{
+            text-align: center;
+            list-style-position: inside;
+            }
+            .box{
+                width: 300px;
+                border: 5px solid red;
+                padding: 10px;
+                margin: auto;
+                text-align: center
+            }
+            mark{
+                background-color: white;
+                color: black;
+            }
+
+            ul.MyUL{
+                display: inline-block;
+                text-align: left;
+            }
+            .name{
+                font-family: 'Courier New', Courier, monospace;
+                color: white;
+                font-size: 20px;
+                float: left;
+                padding-top: 10px;
+                padding-left: 70px;
+            }
+            .menubar{
+                width: 500px;
+                float: left;
+                height: 70px;
+                padding-top: 10px;
+                padding-left: 600px
+            }
+            ul{
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            ul li{
+                list-style: none;
+                margin-left: 62px;
+                margin: 30px;
+                font-size: 25px;
+            }
+            ul li a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                transition: 0.3s ease-in-out;
+            }
+            ul li a:hover{
+                color: yellow;
+            }
+            .pfp{
+                position:absolute;
+                width: 20%;
+                height: 37%;
+                left: 4%;
+                top: 25%;
+            }
+            .icons_wrap {
+                position: absolute;
+                top: 70%;
+                left: 4%;
+            }
+
+            .icon {
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .contact{
+                color: white;
+                position: absolute;
+                top: 62%; 
+                left: 8%;
+                font-size: 25px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .rem{
+                padding-left: 41%;
+            }
+            .bigtitle{
+                font-family: 'Anton', sans-serif;
+                font-size: 200%;
+            }
+            .hp{
+                font-family: 'Fira Code', monospace;
+                font-size: 150%;
+                color: antiquewhite;
+            }
+            .foot{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 13;
+                text-align: center;
+                padding-top: 11%;
+                color: white;
+            }
+        </style>
+
+        <div>
+
+            <div class="name">
+                <h1><u>./Ashuvwxyz</u></h1>
+            </div>
+            <div class="menubar">
+                    <ul style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Resume</a></li>
+                    </ul>
+            </div>
+            <hr style="height: 10px; width: 100%; color: white; background-color: whitesmoke;">
+            <div class="wrapper">
+                <div>
+                    <img class="pfp" style="border-radius: 50%;" src="images\alex_altair.jpg">
+                </div>
+                <p class="contact">contact me on:</p>
+                <div class="icons_wrap">
+                    <a href="https://www.instagram.com/ashuvwxyzz/?hl=en" target="_blank"
+                    ><img src="images/instagram.png" class="icon"
+                    /></a>
+                    <a href="https://twitter.com/AshwinA74502178" target="_blank"
+                    ><img src="images/twitter.png" class="icon"
+                    /></a>
+                    <a href="https://github.com/Ashuvwxyz" target="_blank"
+                    ><img src="images/github.png" class="icon"
+                    /></a>
+                    <a
+                    href="https://www.linkedin.com/in/ashwin-anand-5451a91b1/"
+                    target="_blank"
+                    ><img src="images/linkedin.png" class="icon"
+                    /></a>
+                </div>
+            </div>
+        </div>
+        <div class="rem">
+            <div class="bigtitle">
+                <h1 style="color: rgb(18, 234, 209);"><u><b>Hello there!</b></u></h1>
+            </div>
+            <div class = "hp">
+                <p>$cat welcome_message.txt</p1>
+                <br>
+                <p>
+                    >>Welcome to my website! I am Ashwin Anand,
+                    a Cybersecurity enthusiast, CTF player, and competitive programmer.
+                </p>
+                <p>
+                    Here you will find my interests, skills, and other miscellaenous things
+                    about me!
+                </p>
+            </div>
+
+        </div>
+        <div class="foot">
+            © Copyright Ashuvwxyz
+            <br>
+            Website by Ashwin Anand (CYS)
+        </div>
+    </body>
