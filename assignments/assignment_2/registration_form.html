@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Register here
+        </title>
+    </head>
+    <body>
+        <style>
+            div{
+            margin: 1em 1em 1em 1em;
+
+            padding: 1em 1em 1em 1em;
+            background: rgb(2,0,36);
+            background: linear-gradient(rgb(235, 45, 16) 0%, rgba(237, 40, 10, 0.976) 96%, rgba(222,199,45,1) 98%, rgba(222,199,45,1) 98%, rgba(142,49,242,0.5859143339953169) 98%);
+            color: #ffff;
+            font-family: cursive;
+            border-radius: 1.25rem;
+            }
+            #container_1{
+            text-align:center;
+            }
+
+            .form{
+            width: 100%;
+            margin-bottom: 1em;
+            }
+
+            #submit{
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: rgb(210, 236, 16);
+            color: black;
+            border-radius: 15px;
+            cursor: pointer;
+            }
+
+            textarea{
+            width: 100%;
+            }
+
+
+        </style>
+        <div id="container_1">
+            <h1 id="title">
+            Registration for Anokha'23
+          </h1>
+          <h2>
+            Enter the details as required.
+          </h2>
+            
+          </div><!---container_1--->
+          <div id="container_2">
+            
+            <form id="reg-form">
+              <h2>FOR EVERYONE</h2>
+              <label id="name1-label">First Name</label>
+                <input type="text" id="name1" name="name1" class="form" required placeholder="Enter your first name"><br>
+              <label id="name2-label">Last Name</label>
+                <input type="text" id="name2" name="name2" class="form" required placeholder="Enter your last name"><br>
+              <label id="email-label">Email</label>
+                <input type="email" id="email" name="email" class="form" required placeholder="Enter your email"><br>
+              <label id="number-label">Mobile Number</label>
+                <input type="number" id="mob-num" class="form" placeholder="+91XXXXXXXXXX">
+              <label id="upload-label">Identity <p style="font-size: 60%;">(upload a clear picture of your id card)</p></label>
+                <input type="file" id="myfile" name="myfile" class="form" required>
+              <p>Gender</p>
+              <label>
+                <input type="radio" name="gender" value="Male">Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Female">Female
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Other">Non-Binary
+              </label>
+
+              <h2>FOR AMRITA STUDENTS</h2>
+              <label id="type">Dayscholar or Hosteller</label><br>
+              <select id="dropdown" name="role">
+                <option disabled selected value>
+                  Select
+                </option>
+                <option value="DS">
+                    Day Scholar
+                </option>
+                <option value="HS">
+                  Hosteller
+                </option>
+
+              </select>
+              <p>Participating in any events?</p>
+              <label>
+                <input type="checkbox" name="mode" value="Volunteer">Volunteer
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" name="mode" value="Event_participant">Participant
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" name="mode" value="Audience">Audience
+              </label>
+              <p>Any suggestions?</p>
+                <textarea
+                  id="comments"
+                  name="comment"
+                  placeholder="Enter your suggestions here..."
+                ></textarea>
+              <input type="submit" id="submit" name="submit" value="Submit">
+            </form>
+          </div>
+          
+          
+    </body>
+</html>
