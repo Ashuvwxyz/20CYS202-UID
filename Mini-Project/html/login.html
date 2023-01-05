@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in | Alumni Portal</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../css/signup_css/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/signup_css/navbar.css">
+    <link rel="stylesheet" href="../css/signup_css/style.css">
+</head>
+<body style="background-image: linear-gradient(rgb(255, 0, 140),rgba(252, 252, 252, 0.8))">
+    <div class="navbar">
+        <a href="../index.html"><img src="https://dt19wmazj2dns.cloudfront.net/wp-content/themes/amrita/images/logo.svg"></a>
+        <a href="../index.html" style="float: right;"><i class="fa fa-fw fa-home"></i> Home</a>
+    </div>
+
+    <script>
+        function fp(){
+            alert("A password reset option will be sent to the mail corresponding to your roll number.  It may take a few minutes.");
+            location.replace("../index.html");
+        }
+    </script>
+    <!-- <a href="index.html"><img src="https://dt19wmazj2dns.cloudfront.net/wp-content/themes/amrita/images/logo-colored.svg"></a> -->
+    <div class="main">        <!-- <h1>Alumni Portal</h1> -->
+        <!-- Sign up form -->
+        <section class="signup">
+            <!-- <h1>Alumni Portal</h1> -->
+            <div class="container">
+                <!-- <h1>Alumni Portal</h1> -->
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Login</h2>
+                        <form method="#" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="roll"><i class="zmdi zmdi-label"></i></label>
+                                <input type="text" name="roll" id="roll" placeholder="Your Roll Number"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                            </div>
+                            <a href="#" onclick="return fp()" style="text-align: center; font-size: 150%;">Forgot Password?</a>
+                            <br>
+                            <a href="signup.html" style="text-align: center; font-size: 150%;">Need to create an account?</a>
+                            <div class="form-group form-button">
+                                <!-- <input type="submit" name="signup" id="signin" class="form-submit" value="Login"/> -->
+                                <a href="../home.html"><input type="button" value="Login"></a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="signup-image">
+                        <figure><img src="../images/signup_images/signin-image.jpg" alt="Login"></figure>
+                        <a href="../html/signup.html" class="signin-image-link">Need to create an account?</a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 21%;
+                padding-bottom: 2px;
+                }
+        </style>
+        <img src="../images/signup_images/Amrita_school_of_Engineering_-_Coimbatore.jpg" height="20px" width="20px" class="center">
+        <!-- Sing in  Form
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Login</h2>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div> -->
+
+    <footer>
+        <h4>© Team 1</h4>
+        RAJENDRAPRASAD S<br>
+        ASHWIN ANAND<br>
+        DYANESH S
+    </footer>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
