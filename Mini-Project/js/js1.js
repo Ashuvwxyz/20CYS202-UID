@@ -56,3 +56,55 @@ function validateText6() {
         alert("You have entered an invalid last name!");
     }
 }
+
+/*
+Signup JS 
+Ashwin Anand
+CB.EN.U4CYS21012
+*/
+
+function validatePass() {
+    var x = document.getElementById("pass").value;
+    var y = document.getElementById("re_pass").value;
+    if (x != y){
+        alert("Passwords are not matching! Please enter again.");
+    }
+}
+
+function validateRollNo() {
+    var rollFormat = "(cb|CB).(en|EN).(u4|U4)[a-zA-Z]{3}[0-9]{5}";
+    var x = document.getElementById("roll").value;
+    if (!x.match(rollFormat)) {
+        alert("This roll number is not valid!");
+    }
+}
+
+function validateFile() {
+    var fileInput =
+        document.getElementById('img');
+     
+    var filePath = fileInput.value;
+    var allowedExtensions =
+            /(\.jpg|\.jpeg|\.png)$/i;
+     
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Invalid file type');
+        fileInput.value = '';
+    }
+    return false;
+}
+
+function redirect() {
+    var a1 = (document.getElementById("roll").value).length;
+    var a2 = (document.getElementById("i2").value).length;
+    var a3 = (document.getElementById("i1").value).length;
+    var a4 = (document.getElementById("pass").value).length;
+    var a5 = (document.getElementById("re_pass").value).length;
+    if (a1 === 0 || a2 === 0 || a3 === 0 || a4 === 0 || a5 === 0 ){
+        alert("Please fill in all the required details.");
+    }
+    else{
+        alert("Successfully registered! You will be redirected to the login page.");
+        location.href = "login.html";
+    }
+}
