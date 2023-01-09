@@ -37,16 +37,16 @@ NO TEMPLATE USED-->
                 <!-- <h1>Alumni Portal</h1> -->
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title"><u>Sign up</u></h2>
                         <form method="#" class="register-form" id="register-form">
                             <h3><u>Primary details</u></h3>
                             <div class="form-group">
                                 <label for="roll"><i class="zmdi zmdi-label"></i></label>
-                                <input type="text" name="roll" id="roll" placeholder="Your Roll Number" onchange="validateRollNo();">
+                                <input type="text" name="roll" id="roll" placeholder="Your Roll Number * " onchange="validateRollNo();">
                             </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="i2" placeholder="Your Name" onchange="validateText2();">
+                                <input type="text" name="name" id="i2" placeholder="Your Name * " onchange="validateText2();">
                             </div>
                             <div class="form-group">
                                 <!-- <div class="input-group"> -->
@@ -56,15 +56,15 @@ NO TEMPLATE USED-->
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="i1" placeholder="Your Email" onchange="validateEmail();">
+                                <input type="email" name="email" id="i1" placeholder="Your Email * " onchange="validateEmail();">
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password" onchange="document.getElementById('re_pass').disabled = !(document.getElementById('pass').value).length">
+                                <input type="password" name="pass" id="pass" placeholder="Password * " onchange="document.getElementById('re_pass').disabled = !(document.getElementById('pass').value).length">
                             </div>
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" onchange="validatePass();" disabled/>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password * " onchange="validatePass();" disabled/>
                             </div>
                             <!-- <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />

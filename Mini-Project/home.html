@@ -101,72 +101,6 @@
     </style>
     <!------------------------- Owl Carousel END ------------------------>
 
-
-    <script>
-        function submitToAPI(e) {
-               e.preventDefault();
-        //       var URL = "API Gateway";
-        
-        
-               var firstname = document.getElementById("fname-input").value;
-               var lastname = document.getElementById("lname-input").value;
-               var emailaddress = document.getElementById("email-input").value;
-               var message = document.getElementById("description-input").value;
-               if (firstname=="" || lastname=="" || emailaddress=="" || message=="")
-                {
-                    alert("Please Fill All Required Field");
-                    return false;
-                }
-                
-                nameRE = /^[A-Z]{1}[a-z]{2,20}[ ]{1}[A-Z]{1}[a-z]{2,20}/;
-                if(!nameRE.test(firstname)) {
-                    alert("First Name entered, is not valid");
-                        return false;
-                }
-                lnameRE = /^[A-Z]{1}[a-z]{2,20}[ ]{1}[A-Z]{1}[a-z]{2,20}/;
-                if(!lnameRE.test(lastname)) {
-                    alert("Last Name entered, is not valid");
-                        return false;
-                }
-                
-                phoneRE = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
-                if(!phoneRE.test(phone)) {
-                        alert("Phone number entered, is not valid");
-                        return false;
-                    }
-                
-                emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if(!emailRE.test(emailaddress)) {
-                    alert("Email Address entered, is not valid");
-                        return false;
-                }
-               var data = {
-                  fname : firstname,
-                  lname: lastname,
-                  email : emailaddress,
-                  desc : message
-                };
-                
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("POST", "https://4jjfg6n5qe.execute-api.us-east-1.amazonaws.com/prod/email");
-                xmlhttp.setRequestHeader("Content-Type", "application/json");
-                xmlhttp.send(JSON.stringify(data));
-                xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState === 4) {
-                    var response = JSON.parse(xmlhttp.responseText);
-                    if (xmlhttp.status === 200 ) {
-                        console.log('successful');
-                        document.getElementById("contact-form").innerHTML = "<h1>Thank you for your message/feedback<br>our team will get back to you soon!</h1>";
-                    } else {
-                        console.log('failed');
-                    }
-                }
-            }
-            
-            document.getElementById('contact-form').reset();
-              
-            } 
-        </script>
 </head>
 <body>
     <header>
@@ -325,7 +259,7 @@
     <br><br><br>
 
     <div class="section" id="Management">
-        <img src="images/homepage_images/university-pic.jpg" alt="University-pic">
+        <img src="images/homepage_images/university-pic.jpg" alt="University-pic" style="height: 170%;">
         <h1 class="a d-flex justify-content-center"> 14 Chapters <span style="color:#333">Worldwide</span></h1>
         <div class="about">
             <br><br>
@@ -418,24 +352,23 @@
                 <form class="message" id="contact-form" method="post">
                     <h1>DROP YOUR MESSAGE HERE  <i class="fas fa-level-down-alt" style="color:red;"></i></h1>
                     <label for="fname"  >First Name :</label>
-                    <input type="text" id="fname-input" class="form-control" placeholder="Enter your first name" name="fname" required>
+                    <input type="text" id="i5" class="form-control" placeholder="Enter your first name" name="fname" onchange="validateFname()" required>
                     <label for="lname">Last Name : </label>
-                    <input type="text"id="lname-input" class="form-control" placeholder="Enter your last name" name="lname" required>
+                    <input type="text"id="i6" class="form-control" placeholder="Enter your last name" name="lname" onchange="validateLname()" required>
                     <label for="email">Email Address : </label>
-                    <input type="email" id="email-input" class="form-control" placeholder="For ex. something@gmail.com" name="email" required>
+                    <input type="email" id="i1" class="form-control" placeholder="For ex. something@gmail.com" name="email" onchange="validateContactEmail()" required>
                     <label for="message">Message : </label>
                     <textarea type="text" id="description-input" class="form-control" placeholder="Drop your message or queries here..." name="message" required></textarea>
                     <button type="submit" onClick="submitToAPI(event)">Submit</button>
                 </form>
             </div>
-            <div class="footer" style="width:100%;height:60px;background-color:rgba(0, 0, 0, 0.856);position:relative;top:150px;color:rgba(255, 255, 255, 0.959)">
-                <div class="copy">Copyright Team 1 &copy; 2023</div>
-                <div class="icons">
-                    <a href="https://www.instagram.com/amrita_university/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/AmritaUniversity/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://in.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <div class="terms"><a href="https://www.amrita.edu/terms-conditions/" target="_blank">Terms</a> | <a href="https://www.amrita.edu/privacy/" target="_blank">Privacy Policy</a></div>
+            <div class="footer" style="width:100%;height:100px;position:relative;top:150px;color:rgba(255, 255, 255, 0.959); text-align: center;">
+                <footer style="text-align: center;">
+                    Copyright ©
+                    UID-DBMS-01, II B.Tech CSE (CYS)<br>
+                    Part of 20CYS202 - User Interface Design<br>
+                    Amrita Vishwa Vidyapeetham, Coimbatore
+                </footer>
             </div>
         </div>
     </div>
@@ -446,6 +379,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="javascript-files/bootstrap.js"></script>
     <script src="javascript-files/owl.carousel.js"></script>
+    <script src="js/js1.js"></script>
 
     <!------------------- Script for Owl-carousel -------------------->
     <script type="text/javascript">
