@@ -1,3 +1,14 @@
+<!-- 
+UID LAB EVALUATION 2
+Website for Anokha Tech Fest 
+
+Ashwin Anand
+CB.EN.U4CYS21012
+
+No template used
+
+Registration page
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,8 +23,9 @@
             margin: 1em 1em 1em 1em;
 
             padding: 1em 1em 1em 1em;
-            background: rgb(2,0,36);
-            background: linear-gradient(rgb(235, 45, 16) 0%, rgba(207, 79, 59, 0.976) 30%, rgb(80, 222, 45) 50%, rgb(45, 178, 222) 70%, rgba(142,49,242,0.5859143339953169) 100%);
+            /* background: rgb(2,0,36); */
+            background: #b10f56;
+            /* background: linear-gradient(rgb(235, 45, 16) 0%, rgba(207, 79, 59, 0.976) 30%, rgb(80, 222, 45) 50%, rgb(45, 178, 222) 70%, rgba(142,49,242,0.5859143339953169) 100%); */
             color: #ffff;
             font-family: cursive;
             border-radius: 1.25rem;
@@ -37,7 +49,7 @@
             var a = document.getElementById("email").value;
             if (a.match(mailformat)){
               alert("that works!")
-              return true;
+              return false;
             }
             else{
               alert("email format is incorrect!");
@@ -72,6 +84,7 @@
                       };
                        
                       reader.readAsDataURL(fileInput.files[0]);
+                      return false;
                   }
               }
           }
@@ -86,12 +99,12 @@
                 return false;
             }
             else{
-              return true;
+              return false;
             }
           }
         </script>
         <div id="container_1">
-          <a href="index.html"><img src="https://dt19wmazj2dns.cloudfront.net/wp-content/themes/amrita/images/logo-colored.svg"></a>
+          <a href="index.html"><img src="https://dt19wmazj2dns.cloudfront.net/wp-content/themes/amrita/images/logo.svg"></a>
           <h1 id="title">
             Registration for Anokha'23
           </h1>
@@ -147,7 +160,6 @@
                 <option value="HS">
                   Hosteller
                 </option>
-
               </select>
               <p>Participating in any events?</p>
               <label>
@@ -167,11 +179,22 @@
                   name="comment"
                   placeholder="Enter your suggestions here..."
                 ></textarea>
+                <label>
+                  <input type="checkbox" name="mode" value="Volunteer" onchange="document.getElementById('register').disabled = !this.checked";>Do you accept the terms and conditions?
+                </label>
+                <br>
               <!-- <input type="submit" id="submit" name="submit" value="Submit"> -->
-              <button onclick="window.location.href='index.html'">submit</button>
+              <button id="register" disabled onclick="window.location.href='index.html'">Register</button>
             </form>
           </div>
-          
+        <footer style="text-align: center;">
+          <h4>
+            Copyright © 
+            Ashwin, II B.Tech CSE (CYS) <br>
+            Part of 20CYS202 - User Interface Design <br>
+            Amrita Vishwa Vidyapeetham, Coimbatore
+          </h4>
+        </footer>
           
     </body>
 </html>
